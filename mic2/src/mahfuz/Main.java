@@ -29,5 +29,6 @@ public class Main {
         l.login();
         adminFunction ad = new adminFunction();
         ad.adminFunction();
+        Seller sel = new Seller();
     }
 }

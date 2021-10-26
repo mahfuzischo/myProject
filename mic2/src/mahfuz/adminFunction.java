@@ -4,28 +4,13 @@ import java.util.Scanner;
 
 public class adminFunction extends Login{
 
+    SellerAfterLogin SAL = new SellerAfterLogin();
     public void adminFunction() {
-    /*System.out.println();
-
-        System.out.println("We select you as a admin.");
-
-        System.out.println("Enter your name: ");
-        Scanner input = new Scanner(System.in);
-        String name = input.nextLine();
-        System.out.println("Enter your ID No:");
-        int id = input.nextInt();
-        System.out.println(name);
-        System.out.println(id);
-
-
-        if(id==111 || id==121 || id==127) {
-            login();*/
-
         int x = 0;
 
-        String adminName = new String("Mashafi");
-        String adminId = new String("mma112127");
-        String adminPass = new String("2012020112127");
+        String adminName = new String("Mahfuz");
+        String adminId = new String("111");
+        String adminPass = new String("2012");
 
         while (x == 0) {
             System.out.println("Enter your name: ");
@@ -43,9 +28,23 @@ public class adminFunction extends Login{
                     System.out.println("Enter your password: ");
                     String passWord = new String(input.nextLine());
 
+
                     if (passWord.equals(adminPass)) {
                         m = m + 1;
                         System.out.println("Good Job!!!");
+
+                        System.out.println("Enter 1 to see Available Products.\n Enter 2 to see Sales Insight.");
+
+                        int i = input.nextInt();
+                        if (i == 1) {
+                            SAL.ProductAvailable();
+                        } else if (i == 2) {
+                            SAL.SaleInsight();
+                        } else {
+                            System.out.println("Invalid Input :(");
+                        }
+                        // }
+
                     } else {
                         System.out.println("Incorrect password");
                     }
@@ -57,4 +56,3 @@ public class adminFunction extends Login{
         }
     }
 }
-

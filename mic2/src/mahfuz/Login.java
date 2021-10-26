@@ -21,9 +21,8 @@ public class Login  {
             case 1 :
                 buyerFunction();
                 break;
-            //case 2:
-            //sellerFunction();
-            // break;
+            case 2:
+                new Seller();
              case 3:
                  new adminFunction();
             //default:
